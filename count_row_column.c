@@ -11,7 +11,7 @@ int count_row(char filename[])
         exit(1);
     }
 
-    char line[100]; // create a string to contain each line
+    char line[100]; // create a string to contain each line 
 
     int row = 0;
 
@@ -20,7 +20,7 @@ int count_row(char filename[])
 
     fclose(fp);
 
-    return row;
+    return row-1; // minus the header line
 }
 
 int count_column(char filename[])
