@@ -7,8 +7,8 @@ double sum_func(char filename[], int column)
 {
     FILE* fp = fopen(filename, "r");
     char line[100];
-    double sum, val;
-    int count_comma, buff;
+    double val, sum = 0;
+    int count_comma, buff, line_no = 0;
     char val_str[20];
 
     while( fgets(line, 100, fp) != NULL )
@@ -27,9 +27,12 @@ double sum_func(char filename[], int column)
                 }
 
             }
-
-            sscanf(val_str, "%lf", &val); // convert str into double
+            if (line_no == 0)
+                sscanf("0", "%lf", &val); // assign val = 0
+            else
+                sscanf(val_str, "%lf", &val); // convert str into double
             sum+=val;
+            line_no++;
 
         }
 
