@@ -28,7 +28,7 @@ int main()
     {
         char *token;
 
-        token = strtok(line, "ม");
+        token = strtok(line, "r");
         while(token){
             printf("%-s", token);
             token =strtok(NULL, ",");
