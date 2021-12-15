@@ -8,7 +8,7 @@ int read_csv(char filename[])
 
     if(fp == NULL)
     {
-        perror("Cannot open flie.");
+        perror("");
         exit(1);
     }
 
