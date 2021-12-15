@@ -27,14 +27,14 @@ double max_func(char filename[], int column)
                 }
 
             }
+            sscanf(val_str, "%lf", &val); // convert str into double
+            
             if (line_no == 1) // assign first value to max
-                sscanf(val_str, "%lf", &max); // convert str into double
+                max = val;
 
 
             else if (line_no > 1) // compare the value between max and val
             {
-                sscanf(val_str, "%lf", &val); // convert str into double
-
                 if(val > max)
                     max = val;
             }
